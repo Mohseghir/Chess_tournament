@@ -1,9 +1,4 @@
-import json
-
-
 # player model
-
-
 class Player:
     """model pour un joueur"""
 

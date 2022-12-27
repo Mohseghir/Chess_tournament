@@ -1,5 +1,4 @@
 import json
-from Player import *
 from PlayerView import *
 
 player = PlayerView.add_player()
