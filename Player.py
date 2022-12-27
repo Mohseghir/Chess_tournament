@@ -40,26 +40,3 @@ class Player:
         return self.serialised_player
 
 
-class PlayerView:
-    @staticmethod
-    def add_player():
-        """saisis des informations d'un joueur """
-        last_name = input("Nom : ")
-        first_name = input("Prènom : ")
-        birthday = input("Date de naissance sous la forme JJ/MM/AAAA : ")
-        gender = input("Genre M / F : ")
-        player_id = input("ID du joueur : ")
-        ranking = input("Classement : ")
-        score = input("Score : ")
-        return Player(last_name=last_name, first_name=first_name, birthday=birthday,
-                      gender=gender, player_id=player_id, ranking=int(ranking), score=int(score))
-
-
-player = PlayerView.add_player()
-
-data = player.player_serialisation(player)
-
-with open("data_joueur.json", "w") as write_file:
-    json.dump(data, write_file, indent=2)
-
-print(player)
