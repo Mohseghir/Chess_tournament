@@ -55,7 +55,7 @@ class PlayerView:
                       gender=gender, player_id=player_id, ranking=int(ranking), score=int(score))
 
 
-player = Player("baghaoui", "moha", "29/10/1989", "M", "ERDFE", 4, 2)
+player = PlayerView.add_player()
 
 data = player.player_serialisation(player)
 
