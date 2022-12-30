@@ -1,27 +1,40 @@
+from controller import players_list
+
+
 class Tournament:
 
-    def __init__(self, name, place, start_end_dates, current_round, players_list,
-                 time_controller, description, rounds_number=4):
+    def __init__(self, name, place, start_date, end_date, rounds_number, current_round_number,
+                 rounds_list, time_controller, description):
         self.name = name
         self.place = place
-        self.start_end_dates = start_end_dates
+        self.start_date = start_date
+        self.end_date = end_date
         self.rounds_number = rounds_number
-        self.current_round = current_round
-        self.rounds = []
+        self.current_round_number = current_round_number
         self.players_list = players_list
+        self.rounds_list = rounds_list
         self.time_controller = time_controller
         self.description = description
 
+    def __str__(self):
+        """format lisible de la class"""
+        return f"Le tournois {self.name} à {self.first_name}"
+
+    def __repr__(self):
+        return str(self)
 
 
-#tournament View
+# tournament View
 @staticmethod
 def add_tournament():
     name = input("Nom du tournois : ")
     place = input("Ce tournois se déroule à : ")
-    date = input("Date de début du tournois : ")
-    rounds_number = input("Nombre de tours : ")
-    rounds = []
-    players = players
-    time_controler = time_controler
-    description = description
+    start_date = input("Date de début : ")
+    end_date = input("Date de fin : ")
+    rounds_number = input("Nombre de tours (4 par défaut) : ")
+    current_round_number = input("tour en cours : ")
+    players = players_list
+    rounds_list = rounds_list
+    time_controller =  input(" choisiser votre contolle du temps : un bullet, un blitz ou un coup rapide ?"
+    description = input(" saisisser vos remarques : ")
+

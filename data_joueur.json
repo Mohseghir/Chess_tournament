@@ -1,9 +1,22 @@
 {
-  "last_name": "moh",
-  "first_name": "mfd",
-  "birthday": "23/23/23233",
-  "gender": "M",
-  "player_id": "ER3RRERE",
-  "ranking": 3,
-  "score": 2
+  "players": [
+    {
+      "last_name": "rcd",
+      "first_name": "dffd",
+      "birthday": "dfd",
+      "gender": "fdf",
+      "player_id": "df",
+      "ranking": 2,
+      "score": 2
+    },
+    {
+      "last_name": "fdvf",
+      "first_name": "fvfdvdf",
+      "birthday": "dfvdfv",
+      "gender": "vvvv",
+      "player_id": "ttttt",
+      "ranking": 3,
+      "score": 5
+    }
+  ]
 }

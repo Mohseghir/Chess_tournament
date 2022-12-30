@@ -1,9 +1,8 @@
 class Round:
 
-    def __init__(self, number, start_date, end_date):
-
-        self.number = number
-        self.start_date = start_date
-        self.end_date = end_date
-        self.matchs = []
+    def __init__(self, name, start_date_time, end_date_time):
+        self.name = name # round_1 round_2..etc
+        self.start_date_time = start_date_time # doit étre remplis automatiquement des la creation du tour
+        self.end_date_time = end_date_time # doit étre remplis automatiquement quand le tour est terminé
+        self.matchs_list = []
 
