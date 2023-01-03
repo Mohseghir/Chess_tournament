@@ -1,22 +1,22 @@
 {
   "players": [
     {
-      "last_name": "rcd",
-      "first_name": "dffd",
-      "birthday": "dfd",
-      "gender": "fdf",
-      "player_id": "df",
-      "ranking": 2,
-      "score": 2
+      "last_name": "BAGHAOUI",
+      "first_name": "Mohamed",
+      "birthday": "29/10/1989",
+      "gender": "M",
+      "player_id": "DE1234",
+      "ranking": 1,
+      "score": 0
     },
     {
-      "last_name": "fdvf",
-      "first_name": "fvfdvdf",
-      "birthday": "dfvdfv",
-      "gender": "vvvv",
-      "player_id": "ttttt",
-      "ranking": 3,
-      "score": 5
+      "last_name": "LEGER",
+      "first_name": "FOLSE",
+      "birthday": "34/23/1234",
+      "gender": "F",
+      "player_id": "DE32454",
+      "ranking": 43,
+      "score": 0
     }
   ]
 }
