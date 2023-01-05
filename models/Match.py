@@ -6,5 +6,6 @@ class Match:
         self.score_1 = score_1
         self.score_2 = score_2
 
-
-
+    @staticmethod
+    def match_serialisation(self):
+        return self.__dict__

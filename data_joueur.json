@@ -1,21 +1,12 @@
 {
   "players": [
     {
-      "last_name": "BAGHAOUI",
-      "first_name": "Mohamed",
-      "birthday": "29/10/1989",
-      "gender": "M",
-      "player_id": "DE1234",
-      "ranking": 1,
-      "score": 0
-    },
-    {
-      "last_name": "LEGER",
-      "first_name": "FOLSE",
-      "birthday": "34/23/1234",
-      "gender": "F",
-      "player_id": "DE32454",
-      "ranking": 43,
+      "last_name": "re",
+      "first_name": "re",
+      "birthday": "re",
+      "gender": "re",
+      "player_id": "re",
+      "ranking": 2,
       "score": 0
     }
   ]
