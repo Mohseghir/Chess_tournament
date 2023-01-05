@@ -1,0 +1,39 @@
+
+def players_list(file_name):
+    with open(file_name, "r") as read_file:
+        file = json.load(read_file)
+        players = file['players']
+        return players
+
+
+
+joueur1 = Player("moh", "seghir", "29/10/1989", "M", "3", "2" )
+
+print(joueur1)
+
+jeuour_1 = add_player()
+print("information du joueur", jeuour_1)
+
+
+"""
+Uselist
+
+
+generer des données aloatoir pour creer les information des joueurs
+
+Player.last_name = "random last name
+import random
+
+first_names=('John','Andy','Joe')
+last_names=('Johnson','Smith','Williams')
+group = list()
+for x in range(3):
+    fullname = random.choice(first_names)+" "+random.choice(last_names)
+    group.add(fullname)
+print " ".join(group)
+
+"
+Player.first_name = "random first name"
+Player.birthday = "random date between (today - 90years) and (today - 6years
+Player.gender = "random between M & F"
+Player.ranking = " random between 0 & 10"""

@@ -1,0 +1,26 @@
+{
+  "tournaments": [
+    {
+      "name": "er",
+      "place": "er",
+      "start_date": "er",
+      "end_date": "er",
+      "number_of_rounds": "4",
+      "current_round_number": [],
+      "players": [
+        {
+          "last_name": "re",
+          "first_name": "re",
+          "birthday": "re",
+          "gender": "re",
+          "player_id": "re",
+          "ranking": 2,
+          "score": 0
+        }
+      ],
+      "rounds_list": [],
+      "time_controller": "er",
+      "description": "er"
+    }
+  ]
+}
