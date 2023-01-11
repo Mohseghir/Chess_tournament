@@ -21,15 +21,5 @@ class Player:
 
     @staticmethod
     def player_serialisation(self):
-        """sérialiser les info d'un joueur avant utilisation avec json
-         self.serialised_player = {
-            "last_name": self.last_name,
-            "first_name": self.first_name,
-            "birthday": self.birthday,
-            "gender": self.gender,
-            "player_id": self.player_id,
-            "ranking": self.ranking,
-            "score": self.score
-        }"""
         return self.__dict__
 

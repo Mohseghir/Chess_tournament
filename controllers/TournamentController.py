@@ -1,7 +1,7 @@
 import json
 from views.TournamentView import *
 from controllers.PlayerController import *
-
+from tinydb import TinyDB, Query, where
 tournament_list = []
 
 tournament = TournamentView.add_tournament()

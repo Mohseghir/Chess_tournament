@@ -1,26 +1,35 @@
 {
   "tournaments": [
     {
-      "name": "er",
-      "place": "er",
+      "name": "tour",
+      "place": "paris",
       "start_date": "er",
       "end_date": "er",
       "number_of_rounds": "4",
       "current_round_number": [],
       "players": [
         {
-          "last_name": "re",
-          "first_name": "re",
-          "birthday": "re",
-          "gender": "re",
-          "player_id": "re",
+          "last_name": "ER",
+          "first_name": "er`",
+          "birthday": "er",
+          "gender": "m",
+          "player_id": "er",
           "ranking": 2,
+          "score": 0
+        },
+        {
+          "last_name": "tr",
+          "first_name": "tr",
+          "birthday": "tr",
+          "gender": "tr",
+          "player_id": "tr",
+          "ranking": 3,
           "score": 0
         }
       ],
       "rounds_list": [],
-      "time_controller": "er",
-      "description": "er"
+      "time_controller": "df",
+      "description": "df"
     }
   ]
 }

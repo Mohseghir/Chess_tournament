@@ -1,12 +1,21 @@
 {
   "players": [
     {
-      "last_name": "re",
-      "first_name": "re",
-      "birthday": "re",
-      "gender": "re",
-      "player_id": "re",
+      "last_name": "ER",
+      "first_name": "er`",
+      "birthday": "er",
+      "gender": "m",
+      "player_id": "er",
       "ranking": 2,
+      "score": 0
+    },
+    {
+      "last_name": "tr",
+      "first_name": "tr",
+      "birthday": "tr",
+      "gender": "tr",
+      "player_id": "tr",
+      "ranking": 3,
       "score": 0
     }
   ]
