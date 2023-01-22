@@ -12,12 +12,11 @@ class PlayerView:
         birthday = input("Date de naissance sous la forme JJ/MM/AAAA : ")
         gender = input("Genre M / F : ")
         player_id = input("ID du joueur : ")
-        ranking = input("Classement : ")
-        score = 0
+
         return Player(last_name=last_name, first_name=first_name, birthday=birthday,
-                      gender=gender, player_id=player_id, ranking=int(ranking), score=int(score))
+                      player_id=player_id)
 
     @staticmethod
     def num_of_participant():  # nbr par defaut 8
-        participant_count = int(input("veulliez saisir un nombre paire de participant  : "))
+        participant_count = int(input("combien de joueurs voulez-vous ajouter à la base de données ?  : "))
         return participant_count
