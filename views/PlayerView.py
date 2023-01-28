@@ -10,11 +10,8 @@ class PlayerView:
         last_name = input("Nom : ")
         first_name = input("Prènom : ")
         birthday = input("Date de naissance sous la forme JJ/MM/AAAA : ")
-        gender = input("Genre M / F : ")
-        player_id = input("ID du joueur : ")
 
-        return Player(last_name=last_name, first_name=first_name, birthday=birthday,
-                      player_id=player_id)
+        return Player(last_name=last_name, first_name=first_name, birthday=birthday)
 
     @staticmethod
     def num_of_participant():  # nbr par defaut 8

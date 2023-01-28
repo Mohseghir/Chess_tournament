@@ -2,7 +2,7 @@ class Match:
 
     def __init__(self, player_1, player_2, score_1, score_2):
         self.__match = ([player_1, score_1], [player_2, score_2])  # creates a new tuple for each match
-        
+
     ## getter method to get the properties using an object
     def get_match(self):
         return self.__match
