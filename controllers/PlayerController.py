@@ -7,7 +7,7 @@ from models.Round import Round
 from models.Tournament import Tournament
 import json
 
-participants = 8
+participants = 2
 
 
 def create_player():
@@ -19,7 +19,7 @@ def create_player():
         with open('players.json', 'r') as f:
             players = json.load(f)
     except json.decoder.JSONDecodeError:
-        players = {}
+        players = {"player": []}
 
     for i in range(0, participants):
         player = {}
@@ -29,48 +29,63 @@ def create_player():
         player["first_name"] = first_name
         birthday = input("Date de naissance sous la forme JJ/MM/AAAA : ")
         player["birthday"] = birthday
-        players[i+len(players)-1] = player
+
+        players["player"].append(player)
         print(players)
 
     with open('players.json', 'w') as f:
         json.dump(players, f)
 
-    """player1 = Player("DUBOIT", "Patric", "23/10/1988")
-    player2 = Player("BAGHAOUI", "Mohamed", "29/10/1989")
-    player3 = Player("BEKKA", "SABI", "12/01/1992")
-    player4 = Player("SAMI", "MIKA", "04/12/1989")
-    player5 = Player("FANNY", "Steph", "17/12/1980")
-    player6 = Player("LECLERC", "Marck", "12/03/1960")
-    player7 = Player("FIFI", "max", "12/12/2000")
-    player8 = Player("MARTIN", "Seb", "01/12/2001")
-    # print(player8)
-    return player8, player7"""
-
-
-def create_match():
-    players = create_player()
-    match = Match(players[0], players[1], "0", "0")
-    # match = Match(random.shuffle(players[0]), random.shuffle(players[1]), "0", "0")
-    # print(match.get_match()[0][0], match.get_match()[1][0])
-    # print(players[0])
-    return match
-
 
 def create_tour():
-    with open('players.json', 'r') as f:
-        players = json.load(f)
-        print(players)
+    global player
+    try:
+        with open('players.json', 'r') as f:
+            players = json.load(f)
+    except json.decoder.JSONDecodeError:
+        print("problème au niveau de la lecture du fichier players.json")
 
-    # for i in range(0, 9):
-    rand = random.randint(0, len(players) - 1)
-    # print(players[rand])
+    converted_players = [Player(player_data['last_name'],
+                                     player_data['first_name'],
+                                     player_data['birthday']
+                                     ) for player_data in
+                              players["player"]]
+
+
+    # players_tuple = [(player.get_first_name(),
+    #                   player.get_last_name(),
+    #                   player.get_birthday()
+    #                   ) for player in
+    #                  converted_players]
+    #
+    # print(players_tuple)
+    #
+    # random_players_for_match = random.sample(players_tuple, 2)
+    # print(random_players_for_match)
+
+    # premier tour, mélange de tous les joueurs de façon aléatoire.
+    converted_players = random.sample(converted_players, 8)
 
     i = 0
-    round = Round("1", "Round1", "12/12/1212", "13/12/1212")
+    round = Round(1, "Round1", "12/12/1212", "13/12/1212")
     for i in range(i, 4):
-        match = create_match()
+        two_random_player_for_match = random.sample(converted_players, 2)
+        match = Match(two_random_player_for_match[0],
+                      two_random_player_for_match[1])
         round.add_match(match)
-    # print(round.get_match_list()[0].get_match()[0][0])
+
+        # print(two_random_player_for_match[0],two_random_player_for_match[1])
+        print("Taille de la liste = ", len(converted_players))
+
+        print(round.get_match_list()[i].get_match()[0][0],
+              "",
+              round.get_match_list()[i].get_match()[0][1],
+              " -#- ",
+              round.get_match_list()[i].get_match()[1][0],
+              "",
+              round.get_match_list()[i].get_match()[1][1])
+
+        converted_players = [i for i in converted_players if i not in two_random_player_for_match]
     return round
 
 
@@ -89,12 +104,11 @@ if __name__ == "__main__":
     # running controller function
     """create_tournament()"""
     """create_player()"""
-    create_player()
-    # create_tour()
+    # create_player()
+    create_tour()
 
 """from views.PlayerView import PlayerView
 from tinydb import TinyDB
-
 
 db = TinyDB('data.json')
 players_table = db.table('players')
