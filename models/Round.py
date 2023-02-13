@@ -33,6 +33,14 @@ class Round:
 
 
     ## getter method to get the properties using an object
+    def get_start_date_time(self):
+        return self.__start_date_time
+
+    ## setter method to change the value 'start_date_time' using an object
+    def set_start_date_time(self, start_date_time):
+        self.__start_date_time = start_date_time
+
+    ## getter method to get the properties using an object
     def get_end_date_time(self):
         return self.__end_date_time
 
