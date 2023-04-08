@@ -9,10 +9,21 @@ class Tournament:
         self.__current_round = current_round
         self.__rounds_list = []
         self.__regestred_players = regestred_players
+        self.__cumulat_score_of_player = []
         self.__director_description = director_description
+
 
     def add_round(self, round):
         self.__rounds_list.append(round)
+
+    ## getter method to get the properties using an object
+    def get_cumulat_score_of_player(self):
+        return self.__cumulat_score_of_player
+    ## setter method to change the value 'self.__cumulat_score_of_player = cumulat_score_of_player' using an object
+    def set_cumulat_score_of_player(self, cumulat_score_of_player):
+        self.__cumulat_score_of_player = cumulat_score_of_player
+
+
 
     ## getter method to get the properties using an object
     def get_name(self):
