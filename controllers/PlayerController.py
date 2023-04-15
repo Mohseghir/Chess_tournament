@@ -39,6 +39,8 @@ def create_player():
         player["first_name"] = first_name
         birthday = input("Date de naissance sous la forme JJ/MM/AAAA : ")
         player["birthday"] = birthday
+        id = input("id du joueur : ")
+        player["id"] = id
 
         players["player"].append(player)
         print(players)
@@ -234,10 +236,10 @@ def create_tournament():
 if __name__ == "__main__":
     # running controller function
     """create_tournament()"""
-    """create_player()"""
+    create_player()
     # create_player()
-    round = create_round_1()
-    create_round_2(round)
+    # round = create_round_1()
+    # create_round_2(round)
 
 """from views.PlayerView import PlayerView
 from tinydb import TinyDB

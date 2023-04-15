@@ -1,7 +1,8 @@
 class Player:
     """model pour un joueur"""
 
-    def __init__(self, last_name, first_name, birthday):
+    def __init__(self, id, last_name, first_name, birthday):
+        self.__id = id
         self.__last_name = last_name
         self.__first_name = first_name
         self.__birthday = birthday
@@ -9,6 +10,14 @@ class Player:
     def __str__(self):
         """format lisible de la class"""
         return f"{self.__last_name} {self.__first_name}"
+
+    ## getter method to get the properties using an object
+    def get_id(self):
+        return self.__id
+
+    ## setter method to change the value '_id' using an object
+    def set_id(self, id):
+        self.__id = id
 
     ## getter method to get the properties using an object
     def get_last_name(self):
