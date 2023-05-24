@@ -64,7 +64,8 @@ def create_round_1():
 
     # Convert player data into Player objects and randomly select 8 players for the first round
 
-    converted_players = [Player(player_data['last_name'],
+    converted_players = [Player(player_data['id'],
+                                player_data['last_name'],
                                 player_data['first_name'],
                                 player_data['birthday']
                                 ) for player_data in
@@ -91,11 +92,11 @@ def create_round_1():
 
         print("Taille de la liste = ", len(converted_players))
 
-        print(round.get_match_list()[i].get_match()[0][0],
+        print(round.get_match_list()[i].get_match()[0][0].get_id(),
               "",
               round.get_match_list()[i].get_match()[0][1],
               " -#- ",
-              round.get_match_list()[i].get_match()[1][0],
+              round.get_match_list()[i].get_match()[1][0].get_id(),
               "",
               round.get_match_list()[i].get_match()[1][1])
 # il faut expliquer la ligne si dessous __________________________________________________________
@@ -114,13 +115,9 @@ def create_round_1():
     # le i = 0
     for i in range(0, 4):
         match = {}
-        player_1 = {"last_name": round.get_match_list()[i].get_match()[0][0].get_last_name(),
-                    "first_name": round.get_match_list()[i].get_match()[0][0].get_first_name(),
-                    "birthday": round.get_match_list()[i].get_match()[0][0].get_birthday()}
+        player_1 = {"id": round.get_match_list()[i].get_match()[0][0].get_id()}
         match["player_1"] = player_1
-        player_2 = {"last_name": round.get_match_list()[i].get_match()[1][0].get_last_name(),
-                    "first_name": round.get_match_list()[i].get_match()[1][0].get_first_name(),
-                    "birthday": round.get_match_list()[i].get_match()[1][0].get_birthday()}
+        player_2 = {"id": round.get_match_list()[i].get_match()[1][0].get_id()}
         match["player_2"] = player_2
         match["score_1"] = round.get_match_list()[i].get_match()[0][1]
         score_1_R1 = round.get_match_list()[i].get_match()[0][1]
@@ -145,9 +142,9 @@ def create_round_2(round):
     list_joueurs = []
 
     for i in range(i, 4):
-        joueur_score_1 = [round.get_match_list()[i].get_match()[0][0].get_last_name(),
+        joueur_score_1 = [round.get_match_list()[i].get_match()[0][0].get_id(),
                           round.get_match_list()[i].get_match()[0][1]]
-        joueur_score_2 = [round.get_match_list()[i].get_match()[1][0].get_last_name(),
+        joueur_score_2 = [round.get_match_list()[i].get_match()[1][0].get_id(),
                           round.get_match_list()[i].get_match()[1][1]]
         list_joueurs.append(joueur_score_1)
         list_joueurs.append(joueur_score_2)
@@ -236,10 +233,10 @@ def create_tournament():
 if __name__ == "__main__":
     # running controller function
     """create_tournament()"""
-    create_player()
+    """create_player()"""
     # create_player()
-    # round = create_round_1()
-    # create_round_2(round)
+    round = create_round_1()
+    create_round_2(round)
 
 """from views.PlayerView import PlayerView
 from tinydb import TinyDB
